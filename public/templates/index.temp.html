@@ -1,10 +1,129 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Mama gwebo</title>
+    <title>Fluent Youtube Downloader - Extension</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="title" content="Fluent Youtube Downloader - Extension">
+    <meta name="description" content="A browser extension for the Fluent Youtube Downloader application">
+    <meta name="author" content="Fluent Youtube Downloader - Extension">
+    <meta name="image" href="./media/icons/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta itemprop="name" content="Fluent Youtube Downloader - Extension">
+    <meta itemprop="description" content="A browser extension for the Fluent Youtube Downloader application">
+    <meta itemprop="image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fluent Youtube Downloader - Extension">
+    <meta name="twitter:description" content="A browser extension for the Fluent Youtube Downloader application">
+    <meta property="og:title" content="Fluent Youtube Downloader - Extension">
+    <meta property="og:description" content="A browser extension for the Fluent Youtube Downloader application">
+    <meta property="og:image" href="./media/icons/favicon.png">
+    <meta property="og:image:alt" href="./media/icons/favicon.png">
+    <meta property="og:image:width" content="100">
+    <meta property="og:image:height" content="100">
+    <meta property="og:site_name" content="Fluent Youtube Downloader - Extension">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:type" content="website">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <link rel="icon" type="image/png" href="./media/icons/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./media/icons/favicon.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NDFHFSJQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://rohankanhaisingh.com/libs/Stinky2D-master" type="text/javascript"></script>
+    <script src="https://code.createjs.com/1.0.0/tweenjs.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDFHFSJQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+        @font-face {
+            font-family: "Museo Sans Rounded Thin";
+            src: url(./media/fonts/MuseoSansRounded100.otf);
+        }
+
+        @font-face {
+            font-family: "Museo Sans Rounded Normal";
+            src: url(./media/fonts/MuseoSansRounded300.otf);
+        }
+
+        @font-face {
+            font-family: "Museo Sans Rounded Kinda-Thick";
+            src: url(./media/fonts/MuseoSansRounded500.otf);
+        }
+
+        @font-face {
+            font-family: "Museo Sans Rounded Fat";
+            src: url(./media/fonts/MuseoSansRounded700.otf);
+        }
+
+        @font-face {
+            font-family: "Museo Sans Rounded Massive";
+            src: url(./media/fonts/MuseoSansRounded900.otf);
+        }
+
+        @font-face {
+            font-family: "Museo Sans Rounded Momma-Thick";
+            src: url(./media/fonts/MuseoSansRounded1000.otf);
+        }
+
+        @font-face {
+            font-family: "CreatoDisplay-Black";
+            src: url(./media/fonts/CreatoDisplay-Black.otf);
+        }
+
+        @font-face {
+            font-family: "Segoe UI";
+            src: url("./media/fonts/Segoe UI.ttf");
+        }
+
+        @font-face {
+            font-family: "Cascadia Code";
+            src: url("./media/fonts/CascadiaCode.ttf");
+        }
+
+
+        @font-face {
+            font-family: SyneVariable;
+            src: url("./media/fonts/Syne-VariableFont_wght.ttf");
+        }
+
+
+        :root {
+            --default-font: "Segoe UI", "Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;
+        }
+
+    </style>
 </head>
 <body>
 
-    hiweweqwewq
+    <button>Download video</button>
    
 </body>
 </html>

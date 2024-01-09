@@ -1,0 +1,42 @@
+:host {
+	width: auto;
+	height: auto;
+	min-height: calc(8 * var(--design-unit) * 1px);
+	position: relative;
+	box-sizing: border-box;
+	outline: none;
+	font-family: var(--default-font-family);
+	font-size: var(--base-font-size);
+	border-radius: var(--border-radius);
+	display: inline-flex;
+	user-select: none;
+
+	> button[part=control] {
+		width: 100%;
+		background: padding-box linear-gradient(var(--control-background-color), var(--control-background-color)), border-box linear-gradient(var(--control-primary-border-color), var(--control-secondary-border-color));
+		border: 1px solid transparent;
+		box-sizing: border-box;
+		display: inline-flex;
+		justify-content: center;
+		line-height: 34px;
+		align-items: center;
+		padding: var(--fluent-button-padding);
+		white-space: nowrap;
+		outline: none;
+		text-decoration: none;
+		color: var(--control-primary-text-color);
+		border-radius: inherit;
+		fill: inherit;
+		cursor: inherit;
+		font-family: inherit;
+
+		&:not(:active):hover {
+			background: padding-box linear-gradient(var(--control-background-color-hover), var(--control-background-color-hover)), border-box linear-gradient(var(--control-primary-border-color-hover), var(--control-secondary-border-color-hover));
+			color: var(--control-secondary-text-color);
+		}
+	}
+
+	::slotted(:not(b, i, span, italic, bold, p, h1, h2, h3, h4, h5, h6, u)) {
+		display: none;
+	}
+}

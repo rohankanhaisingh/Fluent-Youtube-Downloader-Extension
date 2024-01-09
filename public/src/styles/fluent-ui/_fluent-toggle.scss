@@ -1,0 +1,66 @@
+:host {
+    width: auto;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    font-family: var(--default-font-family);
+    font-size: var(--base-font-size);
+    border-radius: var(--fluent-toggle-border-radius);
+    display: inline-flex;
+    user-select: none;
+
+    > div[part=control] {
+        border: 1px solid var(--control-secondary-border-color);
+        background: none;
+        width: var(--fluent-toggle-width);
+        height: var(--fluent-toggle-height);
+        padding: var(--fluent-toggle-padding);
+        border-radius: inherit;
+        fill: inherit;
+        cursor: inherit;
+        outline: none;
+        white-space: nowrap;
+        align-items: center;
+        display: inline-flex;
+        -moz-transition: all var(--transition-duration) var(--transition-key);
+        -o-transition: all var(--transition-duration) var(--transition-key);
+        -webkit-transition: all var(--transition-duration) var(--transition-key);
+        transition: all var(--transition-duration) var(--transition-key);
+
+
+        > div[part=thumb] {
+            width: var(--fluent-toggle-thumb-size);
+            height: var(--fluent-toggle-thumb-size);
+            background: var(--accent-color);
+            border-radius: 50%;
+            -moz-transition: all var(--transition-duration) var(--transition-key);
+            -o-transition: all var(--transition-duration) var(--transition-key);
+            -webkit-transition: all var(--transition-duration) var(--transition-key);
+            transition: all var(--transition-duration) var(--transition-key);
+        }
+    }
+}
+
+:host(:hover) {
+    > div[part=control] {
+        > div[part=thumb] {
+            width: var(--fluent-toggle-thumb-width-hover);
+        }
+    }
+}
+
+:host(.active) {
+    > div[part=control] {
+        background: var(--accent-color);
+
+        > div[part=thumb] {
+            -moz-transform: translateX(calc(var(--fluent-toggle-width) - (var(--fluent-toggle-horizontal-padding) * 2)));
+            -ms-transform: translateX(calc(var(--fluent-toggle-width) - (var(--fluent-toggle-horizontal-padding) * 2)));
+            -o-transform: translateX(calc(var(--fluent-toggle-width) - (var(--fluent-toggle-horizontal-padding) * 2)));
+            -webkit-transform: translateX(calc(var(--fluent-toggle-width) - (var(--fluent-toggle-horizontal-padding) * 2)));
+            transform: translateX(calc(var(--fluent-toggle-width) - (var(--fluent-toggle-horizontal-padding) * 2)));
+            background: var(--fluent-toggle-active-color);
+        }
+    }
+}

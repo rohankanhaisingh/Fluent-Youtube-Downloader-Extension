@@ -1,0 +1,58 @@
+$accentColor: #7766a0;
+
+// Background colors.
+$primaryBackgroundColor: #272727;
+$secondaryBackgroundColor: #202020;
+$thirdBackgroundColor: #232323;
+
+// Text colors.
+$primaryTextColor: #dbdbdb;
+$secondaryTextColor: #dbdbdb;
+
+// Control colors
+$controlBackgroundColor: #3c373d;
+$controlPrimaryBorderColor: #484449;
+$controlSecondaryBorderColor: #413b43;
+$controlPrimaryTextColor: inherit;
+$controlSecondaryTextColor: inherit;
+$controlBackgroundColorHover: #4d494f;
+$controlPrimaryBorderColorHover: #4d494f;
+$controlSecondaryBorderColorHover: #4d494f;
+$controlBackgroundColorActive: #4d494f;
+
+$skeletonBackgroundColor: #2f2f2f;
+$skeletonBlinkColor: #373737;
+
+$iconFilter: invert(1);
+
+@mixin CustomTheme {
+    --default-font-family: "Segoe UI", "Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;
+    --accent-color: #{$accentColor};
+    --icon-filter: #{$iconFilter};
+    // Text colors
+    --primary-text-color: #{$primaryTextColor};
+    --secondary-text-color: #{$secondaryTextColor};
+    // Background colors.
+    --primary-background-color: #{$primaryBackgroundColor};
+    --secondary-background-color: #{$secondaryBackgroundColor};
+    --third-background-color: #{$thirdBackgroundColor};
+    --base-font-size: 14px;
+    --design-unit: 4;
+    --border-radius: 4px;
+    --fluent-button-padding: 0px 20px;
+    // Control styles.
+    --control-background-color: #{$controlBackgroundColor};
+    --control-primary-border-color: #{$controlPrimaryBorderColor};
+    --control-secondary-border-color: #{$controlSecondaryBorderColor};
+    --control-primary-text-color: #{$controlPrimaryTextColor};
+    --control-secondary-text-color: #{$controlSecondaryTextColor};
+    --control-background-color-hover: #{$controlBackgroundColorHover};
+    --control-primary-border-color-hover: #{$controlPrimaryBorderColorHover};
+    --control-secondary-border-color-hover: #{$controlSecondaryBorderColorHover};
+    --control-background-color-active: #{$controlBackgroundColorActive};
+    // Spinner
+    --spinner-stoke-width: 5px;
+    // Skeletons
+    --skeleton-background-color: #{$skeletonBackgroundColor};
+    --skeleton-blink-color: #{$skeletonBlinkColor};
+}

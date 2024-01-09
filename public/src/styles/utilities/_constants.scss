@@ -1,0 +1,23 @@
+@use "./_accents" as accents;
+
+$transitionKey: cubic-bezier(0.1, 0.9, 0.2, 1);
+$transitionDuration: .3s;
+
+$titleBarWidth: 100vw;
+$titleBarHeight: 20px;
+$titleBarHorizontalPadding: 20px;
+$titleBarVerticalPadding: 10px;
+$titleBarFontSize: 16px;
+$titleBarControlsContainerWidth: 100px;
+$titleBarControlButtonSize: 15px;
+
+$sideMenuHorizontalPadding: 10px;
+$sideMenuExpandedWidth: 200px;
+$sideMenuCollapsedWidth: 45px;
+$sideMenuHeight: 100%;
+
+$sideMenuButtonHeight: 20px;
+$sideMenuButtonPadding: 10px;
+$sideMenuButtonBorderRadius: 5px;
+
+$sideMenuButtonIconSize: 15px;

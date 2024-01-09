@@ -1,3 +1,17 @@
+@import "./utilities/_root.scss";
+@import "./utilities/_default-styles.scss";
+@import "./utilities/_accents.scss";
+@import "./utilities/_constants.scss";
+@import "./utilities/_mixins.scss";
+
+@import "./fluent-ui/_fluent-button.scss";
+@import "./fluent-ui/_fluent-input.scss";
+@import "./fluent-ui/_fluent-select.scss";
+@import "./fluent-ui/_fluent-spinner.scss";
+@import "./fluent-ui/_fluent-toggle.scss";
+
 body {
-    background: blue;
+    width: 300px;
+    height: 420px;
+    background: red;
 }

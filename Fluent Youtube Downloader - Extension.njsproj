@@ -29,8 +29,47 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="manifest.json" />
     <Content Include="public\index.html" />
+    <Content Include="public\media\fonts\CascadiaCode.ttf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Black.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-BlackItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Bold.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-BoldItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-ExtraBold.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-ExtraBoldItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Light.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-LightItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Medium.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-MediumItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Regular.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-RegularItalic.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-Thin.otf" />
+    <Content Include="public\media\fonts\CreatoDisplay-ThinItalic.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded100.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded1000.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded300.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded500.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded700.otf" />
+    <Content Include="public\media\fonts\MuseoSansRounded900.otf" />
+    <Content Include="public\media\fonts\Segoe UI.ttf" />
+    <Content Include="public\media\fonts\Syne-VariableFont_wght.ttf" />
+    <Content Include="public\media\icons\favicon.png" />
     <Content Include="public\src\styles\app.scss" />
+    <Content Include="public\src\styles\fluent-ui\_fluent-button.scss" />
+    <Content Include="public\src\styles\fluent-ui\_fluent-input.scss" />
+    <Content Include="public\src\styles\fluent-ui\_fluent-select.scss" />
+    <Content Include="public\src\styles\fluent-ui\_fluent-spinner.scss" />
+    <Content Include="public\src\styles\fluent-ui\_fluent-toggle.scss" />
+    <Content Include="public\src\styles\themes\DarkBlueTheme.scss" />
+    <Content Include="public\src\styles\themes\DarkTheme.scss" />
+    <Content Include="public\src\styles\themes\MonkSchijtTheme.scss" />
+    <Content Include="public\src\styles\themes\ObamnaTheme.scss" />
+    <Content Include="public\src\styles\utilities\_accents.scss" />
+    <Content Include="public\src\styles\utilities\_constants.scss" />
+    <Content Include="public\src\styles\utilities\_default-styles.scss" />
+    <Content Include="public\src\styles\utilities\_mixins.scss" />
+    <Content Include="public\src\styles\utilities\_root.scss" />
     <Content Include="public\templates\index.temp.html" />
     <Content Include="serve.js" />
     <Content Include="webpack.config.js" />
@@ -40,8 +79,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
+    <Folder Include="public\media\" />
+    <Folder Include="public\media\fonts\" />
+    <Folder Include="public\media\icons\" />
     <Folder Include="public\src\" />
     <Folder Include="public\src\styles\" />
+    <Folder Include="public\src\styles\fluent-ui\" />
+    <Folder Include="public\src\styles\themes\" />
+    <Folder Include="public\src\styles\utilities\" />
     <Folder Include="public\templates\" />
   </ItemGroup>
   <ItemGroup>

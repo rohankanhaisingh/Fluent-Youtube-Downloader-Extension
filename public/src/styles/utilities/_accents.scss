@@ -1,0 +1,34 @@
+/*
+ 
+    This file contains the standard design
+    variables that will be used by the entire
+    application. Do NOT CHANGE any of these variables.
+
+    If you'd like to create or change a theme, head over
+    to the 'themes.scss' file.
+*/
+
+$accentColor: #7766a0;
+
+// Background colors.
+$primaryBackgroundColor: #f9f9f9;
+$secondaryBackgroundColor: #eaeaea;
+$thirdBackgroundColor: #fff;
+
+// Text colors.
+$primaryTextColor: #000;
+$secondaryTextColor: #000;
+
+// Control colors
+$controlBackgroundColor: #fff;
+$controlPrimaryBorderColor: #efefef;
+$controlSecondaryBorderColor: #d6d6d6;
+$controlPrimaryTextColor: inherit;
+$controlSecondaryTextColor: inherit;
+$controlBackgroundColorHover: #f7f7f7;
+$controlPrimaryBorderColorHover: #e5e5e5;
+$controlSecondaryBorderColorHover: #cecece;
+$controlBackgroundColorActive: #e5e5e5;
+
+$skeletonBackgroundColor: #e9e9e9;
+$skeletonBlinkColor: #f1f1f1;

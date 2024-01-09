@@ -1,0 +1,71 @@
+// This file should contain theme includes.
+// Do not change this file unless you know what you're doing.
+
+// Importing default styles.
+@use "./_accents" as accents;
+
+:root {
+    --default-font-family: "Segoe UI", "Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;
+    --accent-color: #7766a0;
+    --transition-key: cubic-bezier(0.1, 0.9, 0.2, 1);
+    --transition-duration: .3s;
+    --icon-filter: none;
+    // Text colors
+    --primary-text-color: #000;
+    --secondary-text-color: #000;
+    // Background colors.
+    --primary-background-color: #f9f9f9;
+    --secondary-background-color: #eaeaea;
+    --third-background-color: #fff;
+    --base-font-size: 14px;
+    --design-unit: 4;
+    --border-radius: 4px;
+    // Fluent button component styles
+    --fluent-button-padding: 0px 20px;
+    // Fluent select component styles.
+    --fluent-select-min-width: 180px;
+    --fluent-select-min-height: 20px;
+    --fluent-select-vertical-padding: 7px;
+    --fluent-select-horizontal-padding: 10px;
+    --fluent-select-padding: var(--fluent-select-vertical-padding) var(--fluent-select-horizontal-padding);
+    --fluent-select-gap: 10px;
+    --fluent-select-icon-size: 10px;
+    --fluent-select-grid-auto-rows: 30px;
+    --fluent-select-box-shadow-opacity: 10%;
+    --fluent-select-option-height: 20px;
+    --fleunt-select-option-padding: 5px 0 5px 10px;
+    // Fluent input component styles
+    --fluent-input-padding: 0 10px;
+    --fluent-input-min-height: 30px;
+    --fluent-input-stroke-start-size: 40%;
+    --fluent-input-stroke-size: 2px;
+    // Fluent toggle component styles
+    --fluent-toggle-width: 40px;
+    --fluent-toggle-height: 10px;
+    --fluent-toggle-vertical-padding: 5px;
+    --fluent-toggle-horizontal-padding: 5px;
+    --fluent-toggle-padding: var(--fluent-toggle-vertical-padding) var(--fluent-toggle-horizontal-padding);
+    --fluent-toggle-border-radius: 15px;
+    --fluent-toggle-thumb-size: 10px;
+    --fluent-toggle-thumb-width-hover: 10px;
+    --fluent-toggle-active-color: #fff;
+    // Control styles.
+    --control-background-color: #fff;
+    --control-primary-border-color: #efefef;
+    --control-secondary-border-color: #d6d6d6;
+    --control-primary-text-color: inherit;
+    --control-secondary-text-color: inherit;
+    --control-background-color-hover: #f7f7f7;
+    --control-primary-border-color-hover: #e5e5e5;
+    --control-secondary-border-color-hover: #cecece;
+    --control-background-color-active: #e5e5e5;
+    // Spinner
+    --spinner-stoke-width: 5px;
+    // Skeletons
+    --skeleton-background-color: #e9e9e9;
+    --skeleton-blink-color: #f1f1f1;
+    // Dialog
+    --dialog-container-backdrop-filter: blur(5px);
+    --dialog-container-background: rgb(0, 0, 0, 0.2);
+    --dialog-box-shadow: 0 0 1px rgb(0, 0, 0, .4);
+}

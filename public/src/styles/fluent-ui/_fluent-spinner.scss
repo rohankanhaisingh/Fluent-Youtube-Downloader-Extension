@@ -1,0 +1,45 @@
+@keyframes fluent-spinner-animation {
+    0% {
+        stroke-dasharray: 0.01px, 43.97px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        stroke-dasharray: 21.99px, 21.99px;
+        transform: rotate(450deg);
+    }
+
+    100% {
+        stroke-dasharray: 0.01px, 43.97px;
+        transform: rotate(1080deg);
+    }
+}
+
+:host {
+    align-items: center;
+    outline: none;
+    display: flex;
+    width: 32px;
+    height: 32px;
+
+    > svg[part=spinner] {
+        height: 100%;
+        width: 100%;
+
+        > circle[part=background] {
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        > circle[part=indicator] {
+            stroke: var(--accent-color);
+            fill: none;
+            stroke-width: 2px;
+            stroke-linecap: round;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+            transition: all 0.2s ease-in-out 0s;
+            animation: 2s linear 0s infinite normal none running fluent-spinner-animation;
+        }
+    }
+}

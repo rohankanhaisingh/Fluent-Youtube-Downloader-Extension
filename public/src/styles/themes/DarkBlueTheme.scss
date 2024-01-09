@@ -1,0 +1,22 @@
+// The properties of these variables can be changed.
+$themeTextColor: #fff;
+
+$neutralPaddingBox: #fff;
+$neutralPaddingBoxHover: #f7f7f7;
+
+$neutralBorderBox: linear-gradient(#efefef 90%, #d6d6d6 100%);
+$neutralBorderBoxHover: linear-gradient(#e5e5e5 90%, #cecece 100%);
+
+
+// This should not be changed!
+@mixin CustomTheme {
+    --default-text-color: #{$themeTextColor};
+    --base-font-size: 14px;
+    --design-unit: 4;
+    --border-radius: 4px;
+    --fluent-button-padding: 0px 20px;
+    --neutral-padding-box: #{$neutralPaddingBox};
+    --neutral-border-box: #{$neutralBorderBox};
+    --neutral-padding-box-hover: #{$neutralPaddingBoxHover};
+    --neutral-border-box-hover: #{$neutralBorderBoxHover};
+}
