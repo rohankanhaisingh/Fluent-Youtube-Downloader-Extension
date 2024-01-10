@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".env" />
+    <Content Include="public\src\styles\components\_navbar.scss" />
     <Content Include="scss-config.js" />
     <Content Include="manifest.json" />
     <Content Include="public\index.html" />
@@ -87,6 +88,7 @@
     <Folder Include="public\src\" />
     <Folder Include="public\src\styles\" />
     <Folder Include="public\src\styles\fluent-ui\" />
+    <Folder Include="public\src\styles\components\" />
     <Folder Include="public\src\styles\themes\" />
     <Folder Include="public\src\styles\utilities\" />
     <Folder Include="public\templates\" />

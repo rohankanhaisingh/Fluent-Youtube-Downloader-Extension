@@ -55,19 +55,8 @@ export class FluentButton extends HTMLElement {
 	static getCss(): Promise<string> {
 
 		return new Promise(function (resolve, reject) {
-			return fetch("/static/styles/web-components/_fluent-button.css", { method: "GET" })
-				.then(function (responseObject) {
-					responseObject.text()
-						.then(function (cssText: string) {
-							resolve(cssText);
-						})
-						.catch(function (_err: Error) {
-							reject(_err);
-						});
-				})
-				.catch(function (err: Error) {
-					reject(err);
-				});
+
+			resolve(":host{width:auto;height:auto;min-height:calc(8*var(--design-unit)*1px);position:relative;box-sizing:border-box;outline:none;font-family:var(--default-font-family);font-size:var(--base-font-size);border-radius:var(--border-radius);display:inline-flex;user-select:none}:host>button[part=control]{width:100%;background:padding-box linear-gradient(var(--control-background-color), var(--control-background-color)),border-box linear-gradient(var(--control-primary-border-color), var(--control-secondary-border-color));border:1px solid rgba(0,0,0,0);box-sizing:border-box;display:inline-flex;justify-content:center;line-height:34px;align-items:center;padding:var(--fluent-button-padding);white-space:nowrap;outline:none;text-decoration:none;color:var(--control-primary-text-color);border-radius:inherit;fill:inherit;cursor:inherit;font-family:inherit}:host>button[part=control]:not(:active):hover{background:padding-box linear-gradient(var(--control-background-color-hover), var(--control-background-color-hover)),border-box linear-gradient(var(--control-primary-border-color-hover), var(--control-secondary-border-color-hover));color:var(--control-secondary-text-color)}:host ::slotted(:not(b,i,span,italic,bold,p,h1,h2,h3,h4,h5,h6,u)){display:none}");
 		});
 	}
 
@@ -216,20 +205,7 @@ export class FluentSelect extends HTMLElement {
 
 	static getCss(): Promise<string> {
 		return new Promise(function (resolve, reject) {
-			fetch("/static/styles/web-components/_fluent-select.css", { method: "GET" })
-				.then(function (response) {
-					response.text()
-						.then(function (css: string) {
-							resolve(css);
-						})
-						.catch(function (_err: Error) {
-							reject(_err);
-						});
-				})
-				.catch(function (err: Error) {
-					reject(err);
-				});
-			return null;
+			resolve(`@keyframes fadein{0%{opacity:0;-moz-transform:scale(0.98);-ms-transform:scale(0.98);-o-transform:scale(0.98);-webkit-transform:scale(0.98);transform:scale(0.98)}100%{opacity:1;-moz-transform:none;-ms-transform:none;-o-transform:none;-webkit-transform:none;transform:none}}:host{width:auto;height:auto;position:relative;box-sizing:border-box;outline:none;font-family:var(--default-font-family);font-size:var(--base-font-size);border-radius:var(--border-radius);display:inline-flex;user-select:none}:host>div[part=control]{width:100%;height:auto;min-width:var(--fluent-select-min-width);min-height:var(--fluent-select-min-height);background:padding-box linear-gradient(var(--control-background-color), var(--control-background-color)),border-box linear-gradient(var(--control-primary-border-color), var(--control-secondary-border-color));padding:var(--fluent-select-padding);border:1px solid rgba(0,0,0,0);border-radius:inherit;box-sizing:border-box;display:inline-flex;justify-content:left}:host>div[part=control]>div[part=current-value]{width:100%;height:100%;display:grid;grid-template-columns:auto var(--fluent-select-min-height);gap:var(--fluent-select-gap);align-items:center}:host>div[part=control]>div[part=current-value]>span{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}:host>div[part=control]>div[part=current-value]>img{width:100%;height:100%;pointer-events:none;user-select:none;width:var(--fluent-select-icon-size);height:var(--fluent-select-icon-size);margin:auto;-moz-filter:var(--icon-filter);-webkit-filter:var(--icon-filter);filter:var(--icon-filter)}:host>div[part=control]>div[part=dropdown]{width:100%;height:auto;position:absolute;left:0;top:0;z-index:1;display:none;grid-auto-rows:var(--fluent-select-grid-auto-rows);padding:var(--fluent-select-padding);background:padding-box linear-gradient(var(--control-background-color), var(--control-background-color)),border-box linear-gradient(var(--control-primary-border-color), var(--control-secondary-border-color));box-sizing:border-box;border:1px solid rgba(0,0,0,0);border-radius:inherit;box-shadow:0 0 10px rgba(0, 0, 0, var(--fluent-select-box-shadow-opacity));-moz-animation:fadein var(--transition-duration) var(--transition-key);-o-animation:fadein var(--transition-duration) var(--transition-key);-webkit-animation:fadein var(--transition-duration) var(--transition-key);animation:fadein var(--transition-duration) var(--transition-key)}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option){width:calc(100% - 10px);height:var(--fluent-select-option-height);position:relative;content:"";padding:var(--fleunt-select-option-padding);border-radius:var(--border-radius)}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option)::before{width:1px;height:0;position:absolute;top:0;bottom:0;left:0;content:"";margin:auto;border-radius:5px;background:var(--accent-color);z-index:1;-moz-transition:height var(--transition-duration),width var(--transition-duration) var(--transition-key);-o-transition:height var(--transition-duration),width var(--transition-duration) var(--transition-key);-webkit-transition:height var(--transition-duration),width var(--transition-duration) var(--transition-key);transition:height var(--transition-duration),width var(--transition-duration) var(--transition-key)}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option:not([active]):hover){background:var(--control-background-color-hover)}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option:not([active]):hover)::before{height:30%}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option:not([active]):active)::before{height:30%;width:3px}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option[active]){background:var(--control-background-color-active)}:host>div[part=control]>div[part=dropdown] ::slotted(fluent-option[active])::before{height:60%;width:3px}:host(.in-dropdown)>div[part=control]>div[part=dropdown]{display:grid}`);
 		});
 	}
 
@@ -366,20 +342,7 @@ export class FluentInput extends HTMLElement {
 
 	static getCss(): Promise<string> {
 		return new Promise(function (resolve, reject) {
-			fetch("/static/styles/web-components/_fluent-input.css", { method: "GET" })
-				.then(function (response) {
-					response.text()
-						.then(function (css: string) {
-							resolve(css);
-						})
-						.catch(function (_err: Error) {
-							reject(_err);
-						});
-				})
-				.catch(function (err: Error) {
-					reject(err);
-				});
-			return null;
+			resolve(`@keyframes fluent-input-stroke-animation{0%{width:var(--fluent-input-stroke-start-size);opacity:0}100%{width:calc(100% - var(--fluent-input-stroke-size)*2);opacity:1}}:host{width:auto;height:auto;min-height:calc(8*var(--design-unit)*1px);position:relative;box-sizing:border-box;outline:none;font-family:var(--default-font-family);font-size:var(--base-font-size);border-radius:var(--border-radius);display:inline-flex;user-select:none}:host>div[part=control]{width:100%;display:contents;border-radius:inherit}:host>div[part=control]>span[part=content]{width:100%;height:100%;display:block;position:relative;content:"";border-radius:inherit}:host>div[part=control]>span[part=content]>input[part=input]{width:100%;height:auto;min-height:var(--fluent-input-min-height);background:padding-box linear-gradient(var(--control-background-color), var(--control-background-color)),border-box linear-gradient(var(--control-primary-border-color), var(--control-secondary-border-color));border:1px solid rgba(0,0,0,0);box-sizing:border-box;display:inline-flex;justify-content:center;line-height:34px;align-items:center;padding:var(--fluent-input-padding);white-space:nowrap;outline:none;text-decoration:none;color:var(--control-primary-text-color);border-radius:inherit;fill:inherit;cursor:inherit;font-family:inherit}:host>div[part=control]>span[part=content]>input[part=input]:not(:focus):hover{background:padding-box linear-gradient(var(--control-background-color-hover), var(--control-background-color-hover)),border-box linear-gradient(var(--control-primary-border-color-hover), var(--control-secondary-border-color-hover));color:var(--control-secondary-text-color)}:host>div[part=control]>span[part=content]::before{width:calc(100% - var(--fluent-input-stroke-size)*2);height:100%;position:absolute;display:none;pointer-events:none !important;user-select:none !important;content:"";left:0;right:0;bottom:0;margin:auto;border:var(--fluent-input-stroke-size) solid rgba(0,0,0,0);border-bottom-color:var(--accent-color);border-radius:var(--border-radius);-moz-animation:fluent-input-stroke-animation var(--transition-duration) var(--transition-key);-o-animation:fluent-input-stroke-animation var(--transition-duration) var(--transition-key);-webkit-animation:fluent-input-stroke-animation var(--transition-duration) var(--transition-key);animation:fluent-input-stroke-animation var(--transition-duration) var(--transition-key)}:host(.focused)>div[part=control]>span[part=content]::before{display:block}`);
 		});
 	}
 
@@ -506,20 +469,7 @@ export class FluentToggle extends HTMLElement {
 
 	static getCss(): Promise<string> {
 		return new Promise(function (resolve, reject) {
-			fetch("/static/styles/web-components/_fluent-toggle.css", { method: "GET" })
-				.then(function (response) {
-					response.text()
-						.then(function (css: string) {
-							resolve(css);
-						})
-						.catch(function (_err: Error) {
-							reject(_err);
-						});
-				})
-				.catch(function (err: Error) {
-					reject(err);
-				});
-			return null;
+			return resolve(`:host{width:auto;height:auto;position:relative;box-sizing:border-box;outline:none;font-family:var(--default-font-family);font-size:var(--base-font-size);border-radius:var(--fluent-toggle-border-radius);display:inline-flex;user-select:none}:host>div[part=control]{border:1px solid var(--control-secondary-border-color);background:none;width:var(--fluent-toggle-width);height:var(--fluent-toggle-height);padding:var(--fluent-toggle-padding);border-radius:inherit;fill:inherit;cursor:inherit;outline:none;white-space:nowrap;align-items:center;display:inline-flex;-moz-transition:all var(--transition-duration) var(--transition-key);-o-transition:all var(--transition-duration) var(--transition-key);-webkit-transition:all var(--transition-duration) var(--transition-key);transition:all var(--transition-duration) var(--transition-key)}:host>div[part=control]>div[part=thumb]{width:var(--fluent-toggle-thumb-size);height:var(--fluent-toggle-thumb-size);background:var(--accent-color);border-radius:50%;-moz-transition:all var(--transition-duration) var(--transition-key);-o-transition:all var(--transition-duration) var(--transition-key);-webkit-transition:all var(--transition-duration) var(--transition-key);transition:all var(--transition-duration) var(--transition-key)}:host(:hover)>div[part=control]>div[part=thumb]{width:var(--fluent-toggle-thumb-width-hover)}:host(.active)>div[part=control]{background:var(--accent-color)}:host(.active)>div[part=control]>div[part=thumb]{-moz-transform:translateX(calc(var(--fluent-toggle-width) - var(--fluent-toggle-horizontal-padding) * 2));-ms-transform:translateX(calc(var(--fluent-toggle-width) - var(--fluent-toggle-horizontal-padding) * 2));-o-transform:translateX(calc(var(--fluent-toggle-width) - var(--fluent-toggle-horizontal-padding) * 2));-webkit-transform:translateX(calc(var(--fluent-toggle-width) - var(--fluent-toggle-horizontal-padding) * 2));transform:translateX(calc(var(--fluent-toggle-width) - var(--fluent-toggle-horizontal-padding) * 2));background:var(--fluent-toggle-active-color)}`);
 		});
 	}
 
@@ -574,20 +524,7 @@ export class FluentSpinner extends HTMLElement {
 
 	static getCss(): Promise<string> {
 		return new Promise(function (resolve, reject) {
-			fetch("/static/styles/web-components/_fluent-spinner.css", { method: "GET" })
-				.then(function (response) {
-					response.text()
-						.then(function (css: string) {
-							resolve(css);
-						})
-						.catch(function (_err: Error) {
-							reject(_err);
-						});
-				})
-				.catch(function (err: Error) {
-					reject(err);
-				});
-			return null;
+			return resolve(`@keyframes fluent-spinner-animation{0%{stroke-dasharray:.01px,43.97px;transform:rotate(0deg)}50%{stroke-dasharray:21.99px,21.99px;transform:rotate(450deg)}100%{stroke-dasharray:.01px,43.97px;transform:rotate(1080deg)}}:host{align-items:center;outline:none;display:flex;width:32px;height:32px}:host>svg[part=spinner]{height:100%;width:100%}:host>svg[part=spinner]>circle[part=background]{fill:none;stroke-width:2px}:host>svg[part=spinner]>circle[part=indicator]{stroke:var(--accent-color);fill:none;stroke-width:2px;stroke-linecap:round;transform-origin:50% 50%;transform:rotate(-90deg);transition:all .2s ease-in-out 0s;animation:2s linear 0s infinite normal none running fluent-spinner-animation}`);
 		});
 	}
 

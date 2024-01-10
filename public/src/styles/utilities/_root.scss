@@ -4,6 +4,9 @@
 // Importing default styles.
 @use "./_accents" as accents;
 
+@use "../themes/DarkBlueTheme" as DarkBlueTheme;
+@use "../themes/DarkTheme" as DarkTheme;
+
 :root {
     --default-font-family: "Segoe UI", "Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;
     --accent-color: #7766a0;
@@ -68,4 +71,12 @@
     --dialog-container-backdrop-filter: blur(5px);
     --dialog-container-background: rgb(0, 0, 0, 0.2);
     --dialog-box-shadow: 0 0 1px rgb(0, 0, 0, .4);
+}
+
+html[theme=dark-blue] {
+    @include DarkBlueTheme.CustomTheme;
+}
+
+html[theme=windows_fluent_dark] {
+    @include DarkTheme.CustomTheme;
 }

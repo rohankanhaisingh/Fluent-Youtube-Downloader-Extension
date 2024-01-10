@@ -1,0 +1,19 @@
+.app-navbar {
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 10px;
+    background: var(--secondary-background-color);
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-gap: 10px;
+    user-select: none;
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__title {
+        font-size: 1rem;
+    }
+}

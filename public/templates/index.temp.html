@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" theme="windows_fluent_dark">
 <head>
     <title>Fluent Youtube Downloader - Extension</title>
     <meta charset="UTF-8">
@@ -122,8 +122,19 @@
     </style>
 </head>
 <body>
+    <div class="app">
+        <div class="container">
 
-    <fluent-button>Mama gwebo</fluent-button>
-
+            <div class="app-navbar">
+                <img class="app-navbar__icon" src="./media/icons/favicon.png" alt="Fluent Youtube Downloader" />
+                <span class="app-navbar__title">Fluent Youtube Downloader</span>
+            </div>
+            
+            <div class="app-content">
+                <p>Enter video URL:</p>
+                <fluent-input spellcheck="false" autocomplete="off" placeholder="Enter video URL:"></fluent-input>
+            </div> 
+        </div>
+    </div>
 </body>
 </html>
