@@ -8,7 +8,8 @@
 
 body {
     width: 300px;
-    height: 420px;
+    height: auto;
+    display: inline-flex;
 }
 
 .app {
@@ -18,8 +19,46 @@ body {
 .app-content {
     width: calc(100% - 20px);
     padding: 10px;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 10px;
 }
 
-fluent-input {
+section {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+}
+
+#video-title,
+#connection-status {
     width: 100%;
+    display: grid;
+    grid-template-columns: 25px auto;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.connection-control-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 100px;
+    gap: 10px;
+}
+
+fluent-input, fluent-select {
+    width: 100%;
+}
+
+#download-button {
+    margin: 20px auto;
+    display: table;
 }

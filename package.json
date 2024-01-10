@@ -11,9 +11,11 @@
     "clean": "tsc --build --clean",
     "serve": "node ./serve.js",
     "webpack": "npx webpack",
-    "webpack-watch": "npx webpack --watch"
+    "webpack-watch": "npx webpack --watch",
+    "compile-fluentui": "node scss-config.js"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.256",
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",

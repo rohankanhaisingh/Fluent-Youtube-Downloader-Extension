@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" theme="windows_fluent_dark">
+<html xmlns="http://www.w3.org/1999/xhtml" theme="windows_fluent_light">
 <head>
     <title>Fluent Youtube Downloader - Extension</title>
     <meta charset="UTF-8">
@@ -131,8 +131,39 @@
             </div>
             
             <div class="app-content">
-                <p>Enter video URL:</p>
-                <fluent-input spellcheck="false" autocomplete="off" placeholder="Enter video URL:"></fluent-input>
+
+                <section>
+                    <div id="connection-status">
+                        <img src="./media/icons/windows-color-icon-start.png" alt="Connection status" />
+                        <span>Not connected</span>
+                    </div>
+
+                    <div class="connection-control-container">
+                        <fluent-input placeholder="Enter server port:" value="8000"></fluent-input>
+                        <fluent-button>Connect</fluent-button>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="video-title">
+                        <img src="./media/icons/windows-color-icon-youtube.png" alt="Connection status" />
+                        <span>No video found</span>
+                    </div>
+
+                    <span>Video URL:</span>
+                    <fluent-input id="video-url" placeholder="Enter video URL:" spellcheck="false" autocomplete="off"></fluent-input>
+
+                    <span>Video quality:</span>
+                    <fluent-select>
+                        <fluent-option value="bestvideo+bestaudio">Best video & audio</fluent-option>
+                        <fluent-option value="best">Best</fluent-option>
+                        <fluent-option value="worst">Worst</fluent-option>
+                        <fluent-option value="bestvideo">Best video quality</fluent-option>
+                        <fluent-option value="bestaudio">Best audio quality</fluent-option>
+                    </fluent-select>
+
+                    <fluent-button id="download-button">Download</fluent-button>
+                </section>
             </div> 
         </div>
     </div>
