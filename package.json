@@ -1,6 +1,6 @@
 {
   "name": "fluent-youtube-downloader---extension",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "Fluent Youtube Downloader - Extension",
   "main": "app.js",
   "author": {
