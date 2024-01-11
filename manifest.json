@@ -3,7 +3,7 @@
   "name": "Fluent Youtube Downloader",
   "version": "0.0.1",
   "description": "A browser extension for the Fluent Youtube Downloader",
-  "permissions": [ "activeTab" ],
+  "permissions": [ "activeTab", "storage", "scripting" ],
   "action": {
     "default_icon": "./public/media/icons/favicon.png",
     "default_popup": "./public/index.html"

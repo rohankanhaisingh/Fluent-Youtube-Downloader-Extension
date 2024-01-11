@@ -31,6 +31,24 @@ section {
     border-radius: var(--border-radius);
 }
 
+.warning-text {
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    background: var(--primary-background-color);
+    color: #ff0000;
+    margin: 10px 0;
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}
+
+#server-password {
+    margin-bottom: 10px;
+}
+
 #video-title,
 #connection-status {
     width: 100%;

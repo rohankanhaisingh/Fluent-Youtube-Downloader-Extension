@@ -138,10 +138,14 @@
                         <span>Not connected</span>
                     </div>
 
+                    <fluent-input id="server-password" type="password" placeholder="Enter server password:" spellcheck="false" autocomplete="off"></fluent-input>
+
                     <div class="connection-control-container">
-                        <fluent-input placeholder="Enter server port:" value="8000"></fluent-input>
-                        <fluent-button>Connect</fluent-button>
+                        <fluent-input id="server-url" placeholder="Enter server URL:" value="localhost:8000" spellcheck="false" autocomplete="off"></fluent-input>
+                        <fluent-button id="server-connect-button">Connect</fluent-button>
                     </div>
+
+                    <p id="connection-status-warning" class="warning-text">The given URL must be a string type.</p>
                 </section>
 
                 <section>
@@ -154,7 +158,7 @@
                     <fluent-input id="video-url" placeholder="Enter video URL:" spellcheck="false" autocomplete="off"></fluent-input>
 
                     <span>Video quality:</span>
-                    <fluent-select>
+                    <fluent-select id="video-quality">
                         <fluent-option value="bestvideo+bestaudio">Best video & audio</fluent-option>
                         <fluent-option value="best">Best</fluent-option>
                         <fluent-option value="worst">Worst</fluent-option>

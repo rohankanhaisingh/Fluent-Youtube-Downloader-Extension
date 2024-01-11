@@ -96,7 +96,7 @@
     <Folder Include="public\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="public\src\bruh.ts" />
+    <TypeScriptCompile Include="public\src\connection.ts" />
     <TypeScriptCompile Include="public\src\fluent-renderer.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
