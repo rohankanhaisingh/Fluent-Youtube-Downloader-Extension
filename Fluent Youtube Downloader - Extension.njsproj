@@ -33,6 +33,7 @@
     <Content Include="public\media\icons\windows-color-icon-start.png" />
     <Content Include="public\media\icons\windows-color-icon-youtube.png" />
     <Content Include="public\src\styles\components\_navbar.scss" />
+    <Content Include="public\src\styles\components\_spinner.scss" />
     <Content Include="scss-config.js" />
     <Content Include="manifest.json" />
     <Content Include="public\index.html" />

@@ -1,0 +1,18 @@
+.spinner {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    overflow: visible;
+
+    > circle {
+        fill: none;
+        stroke: var(--accent-color);
+        cx: 50%;
+        cy: 50%;
+        r: 50%;
+        stroke-width: var(--spinner-stoke-width);
+        stroke-linecap: round;
+        transform-origin: center;
+    }
+}

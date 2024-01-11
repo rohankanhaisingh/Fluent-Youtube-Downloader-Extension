@@ -1,7 +1,7 @@
 import "./styles/app.scss";
 
 import { FluentButton, FluentInput, FluentSelect, initializeFluentDesignSystem } from "./fluent-renderer";
-import { autoConnect, connectToServer, sendConvertRequest, StorageAuthenticationKeys } from "./connection";
+import { autoConnect, connectToServer, getActiveConversionThread, sendConvertRequest, StorageAuthenticationKeys } from "./connection";
 
 const connectToServerButton = document.querySelector<FluentButton>("#server-connect-button"),
 	serverPasswordInput = document.querySelector<FluentInput>("#server-password"),
@@ -9,7 +9,8 @@ const connectToServerButton = document.querySelector<FluentButton>("#server-conn
 	connectionWarningText = document.querySelector<HTMLParagraphElement>("#connection-status-warning"),
 	downloadButton = document.querySelector<FluentButton>("#download-button"),
 	videoUrlInput = document.querySelector<FluentInput>("#video-url"),
-	videoQualitySelect = document.querySelector<FluentSelect>("#video-quality");
+	videoQualitySelect = document.querySelector<FluentSelect>("#video-quality"),
+	downloadSpinner = document.querySelector<SVGElement>("#download-spinner");
 
 function isNull(variables: any[]): boolean {
 
@@ -95,7 +96,7 @@ function handleConnectButton() {
 
 function handleDownloadButton() {
 
-	if (downloadButton === null || videoUrlInput === null || videoQualitySelect === null) return;
+	if (downloadButton === null || videoUrlInput === null || videoQualitySelect === null || downloadSpinner=== null) return;
 
 	downloadButton.addEventListener("click", function () {
 
@@ -104,8 +105,33 @@ function handleDownloadButton() {
 
 		if (videoQuality === null || videoUrl === null) return;
 
-		sendConvertRequest(videoUrl, videoQuality);
+		if (!downloadSpinner.classList.contains("visible"))
+			downloadSpinner.classList.add("visible");
+
+		if (!downloadButton.classList.contains("hidden"))
+			downloadButton.classList.add("hidden");
+
+		sendConvertRequest(videoUrl, videoQuality).then(function () {
+
+			if (downloadSpinner.classList.contains("visible"))
+				downloadSpinner.classList.remove("visible");
+
+			if (downloadButton.classList.contains("hidden"))
+				downloadButton.classList.remove("hidden");
+		});
 	});
+}
+
+function blockDownloadButton() {
+
+	if (downloadButton === null || downloadSpinner === null) return;
+
+	if (!downloadSpinner.classList.contains("visible"))
+		downloadSpinner.classList.add("visible");
+
+	if (!downloadButton.classList.contains("hidden"))
+		downloadButton.classList.add("hidden");
+
 }
 
 async function main() {
@@ -117,6 +143,12 @@ async function main() {
 
 	if (isConnected !== null)
 		serverPasswordInput?.setValue(isConnected.serverPassword as string);
+
+	// Get active conversion thread.
+	const activeConversionThread = await getActiveConversionThread();
+
+	if (activeConversionThread !== null)
+		blockDownloadButton();
 
 	loadCurrentTab().then(function (tab) {
 		if (tab !== null) displayActiveVideoURL(tab);

@@ -4,6 +4,7 @@
 @import "./utilities/_constants.scss";
 @import "./utilities/_mixins.scss";
 
+@import "./components/_spinner.scss";
 @import "./components/_navbar.scss";
 
 body {
@@ -79,4 +80,19 @@ fluent-input, fluent-select {
 #download-button {
     margin: 20px auto;
     display: table;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+#download-spinner {
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+    display: none;
+
+    &.visible {
+        display: flex;
+    }
 }

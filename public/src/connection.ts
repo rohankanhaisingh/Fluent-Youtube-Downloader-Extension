@@ -132,6 +132,19 @@ export async function connectToServer(serverUrl: string, serverPassword: string 
 	}
 } 
 
+export async function getActiveConversionThread(): Promise<ConvertRequestPostBody | null> {
+
+	if (!isConnected || baseUrl === null) return null;
+
+	const request = await fetch(new URL(baseUrl + "extension/active-thread"), {
+		method: "GET"
+	});
+
+	const responseData: ConvertRequestPostBody | null = await request.json();
+
+	return responseData;
+}
+
 export async function sendConvertRequest(videoUrl: string, videoQuality: string) {
 
 	if (!isConnected || baseUrl === null) return;
@@ -153,4 +166,6 @@ export async function sendConvertRequest(videoUrl: string, videoQuality: string)
 			"Content-Type": "application/json"
 		}
 	});
+
+	console.log(request.status);
 }

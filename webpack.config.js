@@ -10,6 +10,7 @@ const DIST_FOLDER = path.join(__dirname, "public", "dist");
 module.exports = {
 	mode: "production",
 	entry: path.join(ENTRY_FOLDER, "app.ts"),
+	devtool: "source-map",
 	output: {
 		filename: 'bundle.[contenthash].js',
 		path: DIST_FOLDER,
